@@ -1,0 +1,15 @@
+{
+  "name": "abittle",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node abittle.js"
+  },
+  "dependencies": {
+    "express": "3.2.3",
+    "ejs": "*",
+    "mongoose" : "*",
+    "node.extend" : "*",
+    "tracer" : "*"
+  }
+}

@@ -1,0 +1,75 @@
+/* Month selector */
+#bc-month-selector{}
+@media (max-width: 480px){
+    #bc-month-selector{
+        float: left !important;
+    }
+}
+
+/* Calendar widget */
+.bootcal{
+
+}
+.bootcal .thumbnails{
+
+}
+.bootcal .thumbnails .thumbnail{
+    background-color: #ccc;
+    height: 140px;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+}
+.bootcal .thumbnails a.thumbnail:hover{
+    text-decoration: none !important;
+}
+.bootcal .thumbnails .thumbnail .event:first-of-type{
+    margin-top: .3em;
+}
+.bootcal .thumbnails .thumbnail .event{
+    font-size: .8em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bootcal .thumbnails .thumbnail .counter{
+    display: none;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+@media (max-width: 980px){
+    .bootcal .thumbnails .thumbnail{
+        height: 95px;
+    }
+}
+@media (max-width: 768px){
+    .bootcal .thumbnails .thumbnail{
+        height: 85px;
+    }
+}
+@media (max-width: 600px){
+    .bootcal .thumbnails .thumbnail{
+        height: 76px;
+    }
+}
+@media (max-width: 480px){
+    .bootcal .thumbnails .thumbnail{
+        height: 52px;
+    }
+    .bootcal .thumbnails .thumbnail .event{
+        display: none;
+    }
+    .bootcal .thumbnails .thumbnail .counter{
+        display: block;
+    }
+}
+.bootcal .thumbnails .span2 {
+    width: 12%;
+    margin-left: 1.6%;
+    float: left;
+}
+.bootcal .thumbnails .span2:first-child{
+    /*margin-left: 8.51064%;*/
+    margin-left: 3%;
+}

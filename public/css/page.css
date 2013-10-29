@@ -1,0 +1,64 @@
+body{
+    padding-top: 40px;
+}
+@media (max-width: 980px){
+    body{
+        padding-top: 0;
+    }
+}
+@media (max-width: 768px){
+    body{
+        padding: 0 !important;
+    }
+}
+
+/* Navbar */
+.navbar-fixed-top {
+    margin-bottom: 0;
+}
+@media (max-width: 768px){
+    .navbar{
+        margin: 0 !important;
+    }
+    .navbar-inner{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* Content area */
+.pagecanvas{
+    padding-top: 1em;
+}
+@media (max-width: 768px){
+    .pagecanvas{
+           padding: 1em;
+    }
+}
+
+/* Progress bar */
+#bc-progress .progress{
+    margin-bottom: 0;
+}
+#bc-progress .row-fluid .span3{
+    text-align: right;
+}
+#bc-progress .row-fluid .span3,
+#bc-progress .row-fluid .span8{
+    min-height: 0;
+}
+@media (max-width: 768px){
+    #bc-progress .row-fluid .span3{
+        text-align: left;
+    }
+}
+
+/* Utilities */
+.align-left{text-align: left;}
+.align-center{text-align: center;}
+.align-right{text-align: right;}
+
+
+.edit-control {
+    float: right;
+}

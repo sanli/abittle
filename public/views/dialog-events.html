@@ -1,0 +1,94 @@
+<div id="viewdlg" class="modal hide fade" data-backdrop="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>看看每天进步的一点点...</h3>
+    </div>
+    <div class="modal-body">
+        <script type="text/html" id="viewtmpl">
+        <@ if(!evt){ @>
+            <div class="well well-large">今天啥也没记录 @_@ ...</div>
+        <@ }else{ @>
+            <table class="eventlist table">
+            <thead><th>事项</th><th>内容</th></thead>
+            <tbody>
+              <@
+                var note = evt.note ; 
+                for(title in note){ 
+                  var desc = note[title];
+              @>
+                  <tr>
+                    <td><@=title @></td>
+                    <td><@=desc @></td>
+                  </tr>
+              <@ }@>
+            </tbody>
+            </table>
+        <@ } @>
+        </script>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">关闭</a>
+    </div>
+</div>
+
+<div id="editdlg" class="modal hide fade" data-backdrop="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>记下每天进步的一点点...</h3>
+    </div>
+    <div class="modal-body">
+    <form id="noteform" class="form-horizontal">
+        <fieldset>
+
+        <!-- Form Name -->
+        <legend>作业情况</legend>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label">语文作业</label>
+          <div class="controls">
+            <input id="语文作业" name="语文作业" type="text" placeholder="语文作业完成情况，错误个数：x" class="input-xlarge">
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label">数学作业</label>
+          <div class="controls">
+            <input id="数学作业" name="数学作业" type="text" placeholder="数学作业完成情况，错误个数：x" class="input-xlarge">
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label">英语作业</label>
+          <div class="controls">
+            <input id="英语作业" name="英语作业" type="text" placeholder="英语作业完成情况，错误个数：x" class="input-xlarge">
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label">写字</label>
+          <div class="controls">
+            <input id="写字" name="写字" type="text" placeholder="写字认真程度，错字个数：x" class="input-xlarge">
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="control-group">
+          <label class="control-label">其他</label>
+          <div class="controls">                     
+            <textarea id="其他" name="其他"></textarea>
+          </div>
+        </div>
+
+        </fieldset>
+        </form>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn cancle" data-dismiss="modal" aria-hidden="true">关闭</button>
+        <button id="saveBuildingBtn" class="btn btn-primary">保存</button>
+      </div>
+</div>
